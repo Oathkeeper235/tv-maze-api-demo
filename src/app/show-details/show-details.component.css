@@ -1,0 +1,49 @@
+/* Container for show details */
+.show-details-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Show title */
+  .show-details-container h1 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  /* Show summary */
+  .show-details-container p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Cast list */
+  .show-details-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .show-details-container li {
+    padding: 5px 0;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .show-details-container {
+      width: 95%;
+    }
+  
+    .search-container input[type="text"] {
+      width: 200px;
+    }
+  }
+  

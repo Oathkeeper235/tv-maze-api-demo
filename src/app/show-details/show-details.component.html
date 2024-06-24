@@ -1,0 +1,9 @@
+<div *ngIf="show">
+  <h1>{{ show.name }}</h1>
+  <p [innerHTML]="show.summary"></p>
+  <ul>
+    <li *ngFor="let cast of show._embedded.cast">
+      {{ cast.person.name }} as {{ cast.character.name }}
+    </li>
+  </ul>
+</div>
