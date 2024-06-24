@@ -1,9 +1,15 @@
-<div *ngIf="show">
+<div *ngIf="show" class="show-details-container">
   <h1>{{ show.name }}</h1>
+  <img *ngIf="show.image" [src]="show.image.medium" alt="Show Image" />
   <p [innerHTML]="show.summary"></p>
-  <ul>
+  
+  <h2>Cast:</h2>
+  <ul class="cast-list">
     <li *ngFor="let cast of show._embedded.cast">
-      {{ cast.person.name }} as {{ cast.character.name }}
+      <div class="cast-item">
+        <img *ngIf="cast.person.image" [src]="cast.person.image.medium" alt="Cast Image" />
+        <span>{{ cast.person.name }} as {{ cast.character.name }}</span>
+      </div>
     </li>
   </ul>
 </div>

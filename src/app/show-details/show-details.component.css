@@ -41,4 +41,17 @@
       width: 200px;
     }
   }
+
+  .cast-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cast-item img {
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
   

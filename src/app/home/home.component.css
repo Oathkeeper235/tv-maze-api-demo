@@ -59,4 +59,17 @@
   .results-container a:hover {
     text-decoration: underline;
   }
+
+  .show-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .show-item img {
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
   
