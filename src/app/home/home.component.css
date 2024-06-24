@@ -1,4 +1,3 @@
-/* Container for the search section */
 .search-container {
     display: flex;
     justify-content: center;
@@ -6,7 +5,6 @@
     margin-top: 50px;
   }
   
-  /* Input field for the search bar */
   .search-container input[type="text"] {
     width: 300px;
     padding: 10px;
@@ -16,7 +14,6 @@
     font-size: 16px;
   }
   
-  /* Search button */
   .search-container button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -27,12 +24,10 @@
     font-size: 16px;
   }
   
-  /* Hover effect for the search button */
   .search-container button:hover {
     background-color: #0056b3;
   }
   
-  /* Container for search results */
   .results-container {
     margin-top: 30px;
     display: flex;
@@ -40,7 +35,6 @@
     align-items: center;
   }
   
-  /* Each show result item */
   .results-container ul {
     list-style: none;
     padding: 0;
@@ -56,7 +50,6 @@
     text-align: center;
   }
   
-  /* Link to show details */
   .results-container a {
     text-decoration: none;
     color: #007bff;
