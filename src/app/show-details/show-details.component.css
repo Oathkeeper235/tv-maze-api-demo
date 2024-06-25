@@ -1,57 +1,103 @@
 .show-details-container {
-    margin: 50px auto;
-    width: 80%;
-    max-width: 800px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .show-details-container h1 {
-    margin-top: 0;
-    font-size: 2em;
-    color: #333;
-  }
-  
-  .show-details-container p {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .show-details-container ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .show-details-container li {
-    padding: 5px 0;
-    font-size: 1.1em;
-    color: #333;
-  }
-  
-  @media (max-width: 600px) {
-    .show-details-container {
-      width: 95%;
-    }
-  
-    .search-container input[type="text"] {
-      width: 200px;
-    }
+  margin: 50px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.header-row img {
+  width: 150px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+
+.summary {
+  flex: 1;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cast-container,
+.episodes-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.episodes-container {
+  margin-right: 0;
+}
+
+.cast-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cast-item img {
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.episode-list {
+  list-style: none;
+  padding: 0;
+}
+
+.episode-item {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  .show-details-container {
+    width: 95%;
   }
 
-  .cast-item {
-    display: flex;
+  .header-row {
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
   }
-  
-  .cast-item img {
-    width: 80px;
-    margin-right: 10px;
-    border-radius: 50%;
+
+  .header-row img {
+    margin-bottom: 20px;
   }
-  
-  
+
+  .details-row {
+    flex-direction: column;
+  }
+
+  .cast-container,
+  .episodes-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

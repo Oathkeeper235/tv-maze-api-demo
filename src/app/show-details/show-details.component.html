@@ -1,15 +1,36 @@
 <div *ngIf="show" class="show-details-container">
-  <h1>{{ show.name }}</h1>
-  <img *ngIf="show.image" [src]="show.image.medium" alt="Show Image" />
-  <p [innerHTML]="show.summary"></p>
-  
-  <h2>Cast:</h2>
-  <ul class="cast-list">
-    <li *ngFor="let cast of show._embedded.cast">
-      <div class="cast-item">
-        <img *ngIf="cast.person.image" [src]="cast.person.image.medium" alt="Cast Image" />
-        <span>{{ cast.person.name }} as {{ cast.character.name }}</span>
-      </div>
-    </li>
-  </ul>
+  <button class="back-button" (click)="goBack()">Back to Home</button>
+
+  <div class="header-row">
+    <img *ngIf="show.image" [src]="show.image.medium" alt="Show Image" />
+    <div class="summary">
+      <h1>{{ show.name }}</h1>
+      <p [innerHTML]="show.summary"></p>
+    </div>
+  </div>
+
+  <div class="details-row">
+    <div class="cast-container">
+      <h2>Cast:</h2>
+      <ul class="cast-list">
+        <li *ngFor="let cast of limitedCast">
+          <div class="cast-item">
+            <img *ngIf="cast.person.image" [src]="cast.person.image.medium" alt="Cast Image" />
+            <span>{{ cast.person.name }} as {{ cast.character.name }}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="episodes-container">
+      <h2>Episodes:</h2>
+      <ul class="episode-list">
+        <li *ngFor="let episode of episodes">
+          <div class="episode-item">
+            <strong>{{ episode.name }}</strong> - Season {{ episode.season }}, Episode {{ episode.number }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

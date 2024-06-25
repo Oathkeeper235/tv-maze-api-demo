@@ -17,4 +17,8 @@ export class TvMazeService {
   getShowDetails(id: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/shows/${id}?embed=cast`);
   }
+
+  getEpisodes(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/shows/${id}/episodes`);
+  }
 }
